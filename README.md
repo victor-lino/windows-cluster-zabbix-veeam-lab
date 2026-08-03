@@ -1,37 +1,37 @@
-# Homelab Avancado: Windows Server Failover Cluster, TrueNAS, Zabbix, Grafana e Veeam
+# Advanced Homelab: Windows Server Failover Cluster, TrueNAS, Zabbix, Grafana and Veeam
 
-Laboratorio pratico focado na implementacao, monitoramento em tempo real e protecao de dados de uma infraestrutura corporativa de Alta Disponibilidade (HA) utilizando Windows Server Failover Cluster (WSFC).
+Practical laboratory focused on the implementation, real-time monitoring and data protection of a High Availability (HA) corporate infrastructure using Windows Server Failover Cluster (WSFC).
 
-## Visao Geral do Projeto
+## Project Overview
 
-Este projeto documenta a construcao e validacao de um ambiente de missao critica contendo:
-- Alta Disponibilidade (HA): Cluster de Failover de dois nos (NODE01 e NODE02) em Windows Server.
-- Storage Compartilhado (SAN/iSCSI): TrueNAS Core disponibilizando LUNs iSCSI para Quorum e Dados.
-- Observabilidade e Monitoramento: Zabbix Server e Grafana para coleta de metricas e alertas em tempo real.
-- Protecao de Dados: Veeam Backup & Replication para copias de seguranca automatizadas do cluster.
+This project documents the construction and validation of a mission critical environment containing:
+- High Availability (HA): Failover Cluster of two nodes (NODE01 and NODE02) on Windows Server.
+- Shared Storage (SAN/iSCSI): TrueNAS Core providing iSCSI LUNs for Quorum and Data.
+- Observability and Monitoring: Zabbix Server and Grafana for collecting metrics and alerts in real time.
+- Data Protection: Veeam Backup & Replication for automated cluster backups.
 
-## Estrutura de Documentacao
+## Documentation Structure
 
-Para facilitar a navegacao, a documentacao deste laboratorio foi dividida nos seguintes modulos:
+To facilitate navigation, the documentation for this laboratory was divided into the following modules:
 
-- [Arquitetura e Topologia](architecture/README.md): Detalhes de rede, mapeamento de IPs e topologia.
-- [Guias de Configuracao](docs/README.md): Resumo do processo de implementacao dos servicos.
-- [Monitoramento](monitoring/README.md): Detalhes da integracao entre Zabbix e Grafana.
-- [Testes e Validacao](validation/README.md): Relatorio do teste de stress, failover e status dos backups.
+- [Architecture and Topology](architecture/README.md): Network details, IP mapping and topology.
+- [Configuration Guides](docs/README.md): Summary of the service implementation process.
+- [Monitoring](monitoring/README.md): Details of the integration between Zabbix and Grafana.
+- [Tests and Validation](validation/README.md): Stress test report, failover and backup status.
 
-## Galeria de Evidencias
+## Evidence Gallery
 
-As evidencias visuais do funcionamento do ambiente estao localizadas na pasta `/images`. O fluxo demonstra:
-1. O ambiente em estado saudavel.
-2. A interrupcao forgada do NODE01.
-3. A deteccao imediata da falha pelo Zabbix e Grafana.
-4. A continuidade dos servicos no NODE02.
-5. O sucesso das rotinas de backup no Veeam.
+Visual evidence of the environment's operation is located in the `/images` folder. The flow demonstrates:
+1. The environment is in a healthy state.
+2. Forced interruption of NODE01.
+3. Immediate failure detection by Zabbix and Grafana.
+4. Continuity of services at NODE02.
+5. The success of Veeam backup routines.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- Sistemas Operacionais: Windows Server, TrueNAS CORE, Linux Ubuntu
-- Storage e Redes: iSCSI Target/Initiator, ZFS, pfSense (Firewall/Gateway)
-- Alta Disponibilidade: Windows Server Failover Clustering (WSFC)
-- Monitoramento: Zabbix 7.0 LTS, Grafana
+- Operating Systems: Windows Server, TrueNAS CORE, Linux Ubuntu
+- Storage and Networks: iSCSI Target/Initiator, ZFS, pfSense (Firewall/Gateway)
+- High Availability: Windows Server Failover Clustering (WSFC)
+- Monitoring: Zabbix 7.0 LTS, Grafana
 - Backup: Veeam Backup & Replication Community Edition
